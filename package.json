@@ -1,0 +1,19 @@
+{
+  "name": "inspire-mexhep",
+  "version": "1.0.0",
+  "description": "bot that twits hep-articles on a daily basis",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "twit": "*"
+  },
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
