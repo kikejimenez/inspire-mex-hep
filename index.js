@@ -1,6 +1,5 @@
-const publications = require('./request.js')
-const twit = require('./bot.js')
-
+const publications = require('./lib/request.js')
+const twit = require('./lib/bot.js')
 
 
 
