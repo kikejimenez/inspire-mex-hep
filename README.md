@@ -14,9 +14,8 @@ Daily scientific High Energy papers by Mexican Institutions from http://inspireh
 
 ## Based on
 
- * [https://medium.freecodecamp.org/how-to-build-and-deploy-a-multifunctional-twitter-bot-49e941bb3092]- How to build and deploy a multifunctional Twitter bot
- 
- * [https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08] Create a Simple Twitter Bot with Node.js
+ * [How to build and deploy a multifunctional Twitter bot](https://medium.freecodecamp.org/how-to-build-and-deploy-a-multifunctional-twitter-bot-49e941bb3092) 
+ * [Create a Simple Twitter Bot with Node.js](https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08)
 
 ## License
 
