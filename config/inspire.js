@@ -12,7 +12,7 @@ module.exports = {
                     ],    
         searchOptions: [
         "cc+mexico",
-        "and+de+>%3D+today+-+5"
+        "and+de+>%3D+today+-+3"
         ],
         url: function(){
             return  this.searchPage+
