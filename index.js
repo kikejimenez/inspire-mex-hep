@@ -5,10 +5,17 @@ const createParameters = require('./lib/create-parameters.js')
 
 
 
-publications(function(err, data){
-    if(err) return console.log(err);
-    JSON.parse(data)
-        .forEach((publication) => twit(createParameters(publication))                
-        )
-   })
-   
+    publications(function(err, data){
+        if(err) return console.log(err);
+        JSON.parse(data)
+            .forEach((publication) => twit(function(err, data){
+                                           if(err) return console.log(err);
+                                            console.log(data)
+                                           }
+                                           ,createParameters(publication))                
+            )
+       })
+
+
+
+    
