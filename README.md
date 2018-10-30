@@ -5,20 +5,18 @@ Daily scientific High Energy papers by Mexican Institutions from http://inspireh
 
 ## Built With
 
-* [Twit](https://www.npmjs.com/package/twit) - The web framework used
-* [Request](https://www.npmjs.com/package/request) - Dependency Management
+* [Twit](https://www.npmjs.com/package/twit) - Twitter API Client for node
+* [Request](https://www.npmjs.com/package/request) - Simplified HTTP client
 
 ## Authors
 
-* **Enrique Jimenez** -  [kikejimenez](https://github.com/kikejimenez)
+* **Enrique Jimenez** - [kikejimenez](https://github.com/kikejimenez)
 
 ## Based on
 
- * How to build and deploy a multifunctional Twitter bot
- * https://medium.freecodecamp.org/how-to-build-and-deploy-a-multifunctional-twitter-bot-49e941bb3092
-
- * Create a Simple Twitter Bot with Node.js
- * https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08
+ * [https://medium.freecodecamp.org/how-to-build-and-deploy-a-multifunctional-twitter-bot-49e941bb3092]- How to build and deploy a multifunctional Twitter bot
+ 
+ * [https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08] Create a Simple Twitter Bot with Node.js
 
 ## License
 
