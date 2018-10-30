@@ -1,6 +1,7 @@
 # INSPIRE-MEX-HEP   
 
-Twitter Bot with Node js: \n
+Twitter Bot with Node js: 
+
 Daily scientific High Energy papers by Mexican Institutions from http://inspirehep.net 
 
 ## Built With
