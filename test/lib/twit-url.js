@@ -1,4 +1,4 @@
-const  createParameters = require('../../lib/create-parameters.js')
+const  inspireToTwitter = require('../../lib/inspire-to-twitter.js')
 const bot = require('../../lib/bot.js')
 
 var Twit = require("twit")
@@ -13,7 +13,7 @@ params = {
   }
 
 
-      describe("bot()", function(){
+      describe("bot.js", function(){
         it('Update and destroy a message.',function(done){        
           bot(function(err,data){
                if(err){
@@ -27,7 +27,7 @@ params = {
                        })     
                 }           
           }
-          ,createParameters(params))
+          ,inspireToTwitter(params))
         })
           
       })

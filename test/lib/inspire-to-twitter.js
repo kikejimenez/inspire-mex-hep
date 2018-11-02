@@ -1,4 +1,4 @@
-const  createParameters = require('../../lib/create-parameters.js')
+const  createRecordUrl = require('../../lib/inspire-to-twitter.js')
 assert = require('assert')
 
 
@@ -13,8 +13,8 @@ module.exports = function() {
 
 
 describe("create-parameters.js", function(){
-  it('publication.title.title has the same value as createParameters(publication).status',function(done){
-  assert(publication.title.title +  "http://inspirehep.net/record/" + publication.recid, createParameters(publication).status)
+  it('publication.title.title has the same value as createRecordUrl(publication).status',function(done){
+  assert(publication.title.title +  "http://inspirehep.net/record/" + publication.recid, createRecordUrl(publication).status)
   done()
   })
 

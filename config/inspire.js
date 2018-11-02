@@ -2,26 +2,33 @@
 
 //Inspire-HEP search especifications
 
-module.exports = {
-        searchPage:"http://inspirehep.net/search?",
-        recordsDisplayed: 10,  
-        outputFormat: "recjson",
-        outputTags: [
-                   "title",
-                 "recid"
-                    ],    
-        searchOptions: [
-        "cc+mexico",
-        "and+de",
-        //">",
-        "%3D+today",
-        "-+1"
-        ],
-        url: function(){
-            return  this.searchPage+
-                    "p=find+"+this.searchOptions.join("+")+
-                    "&"+"rg=" + this.recordsDisplayed +
-                    "&"+"of=" + this.outputFormat +  
-                    "&"+"ot=" + this.outputTags.join()       
+module.exports = function(inspireParameters){
+        
+        const urlObj = {
+                      //defaults
+                 searchPage:"http://inspirehep.net/search?",
+                 recordsDisplayed: 10,  
+                 outputFormat: "recjson",
+                 outputTags: [
+                    "title",
+                    "recid"
+                     ], 
+              }
+  
+        urlObj.searchOptions =  [
+                                 "cc+" + inspireParameters.countryCode,
+                                 "and+de",
+                                 ">%3D+today",
+                                 "-+" + inspireParameters.daysBefore
+                                ]
+
+        urlObj.url = function(){
+            return  urlObj.searchPage +
+                    "p=find+" + urlObj.searchOptions.join("+")+
+                    "&"+"rg=" + urlObj.recordsDisplayed +
+                    "&"+"of=" + urlObj.outputFormat +  
+                    "&"+"ot=" + urlObj.outputTags.join()       
     }
+
+    return urlObj
 }
