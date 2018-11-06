@@ -5,20 +5,38 @@ const inspireUrl = require('./config/inspire.js')
 
 
     inspireParameters = {
-        countryCode: 'US',
-        daysBefore: 1
+        countryCode: 'MX',
+        daysBefore: 5
     }
 
-    publications(inspireUrl(inspireParameters).url(),function(err, data){
-        if(err) return console.log(err);
-        JSON.parse(data)
-            .forEach((publication) => twit(function(err, data){
-                                           if(err) return console.log(err);
-                                            console.log(data)
-                                           }
-                                           ,inspireToTwitter(publication))                
-            )
-       })
+    publications(inspireUrl(inspireParameters).url())
+    .then( function(publications){
+            var promise = Promise.resolve('Initializing..')
+            var publicationsArray = JSON.parse(publications)
+            var publicationStatus = publicationsArray.map( function(publication){
+                return  {
+                         'status':'succeed', 
+                         'publication':  publication.title.title
+                        }
+            })
+            publicationsArray.forEach( (publication) => {
+                promise = promise
+                .then( function(data){
+                    return twit(inspireToTwitter(publication))
+                })
+                .catch(
+                    function(error){
+                        publicationStatus.status = 'fail' 
+                })    
+            })
+            if(publicationStatus.length == 0) return   console.log('No new publications')     
+            console.log('list of publications. \n',publicationStatus)    
+
+    })
+    .catch( function(err){
+        console.log('inspire:\n', err)
+    })
+    
 
 
 

@@ -1,3 +1,4 @@
 keys_env
 ./arxiv/
 travis_keys
+./test/lib/inspire-publications-real.js

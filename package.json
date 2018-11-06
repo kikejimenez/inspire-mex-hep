@@ -4,6 +4,7 @@
   "description": "bot that twits hep-articles on a daily basis",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
     "test": "mocha"
   },
   "author": "",
