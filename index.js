@@ -6,7 +6,7 @@ const inspireUrl = require('./config/inspire.js')
 
     inspireParameters = {
         countryCode: 'MX',
-        daysBefore: 5
+        daysBefore: 2
     }
 
     publications(inspireUrl(inspireParameters).url())

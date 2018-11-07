@@ -6,7 +6,6 @@ const inspirePublications = require('./lib/inspire-publications.js')
 
 
 inspireUrl()
-//inspireToTwitter()
-//twit()
-//inspirePublications()
+inspireToTwitter()
+twit()
 inspirePublications()
